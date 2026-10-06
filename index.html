@@ -37,7 +37,7 @@
   nav a { margin-left: 22px; color: var(--muted); text-decoration: none; font-size: 15px; }
   nav a:hover { color: var(--ink); text-decoration: underline; }
 
-  .hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: center; padding: 56px 0 72px; }
+  .hero { display: grid; grid-template-columns: 1fr; gap: 0; align-items: center; padding: 56px 0 72px; }
   h1 { font-family: "Playfair Display", Georgia, serif; font-weight: 400; font-size: clamp(48px, 8vw, 88px); line-height: 1; letter-spacing: -.02em; margin: 0 0 20px; }
   h1 em { font-style: italic; }
   .role { font-size: 20px; font-weight: 500; margin: 0 0 12px; }
@@ -106,11 +106,6 @@
         <p class="bio">I report on markets, business, and public policy in New York, and I like stories where the numbers explain the news. My work has appeared at NBC News, Forbes, and City &amp; State New York.</p>
         <a class="btn" href="#work">View my work</a><span class="loc">New York, NY</span>
       </div>
-      <div class="photo">
-        <!-- Upload your photo to the same place as index.html, named headshot (1).jpg or grace.jpg -->
-        <img id="headshot" src="headshot%20(1).jpg" alt="Portrait of Grace Thomas">
-        <span class="initials" style="display:none" aria-hidden="true">GT</span>
-      </div>
     </div>
 
     <div class="skills" aria-label="Skills">
@@ -174,17 +169,5 @@
     <span>&copy; 2026</span>
   </footer>
 </div>
-<script>
-  (function () {
-    var img = document.getElementById('headshot');
-    var names = ['headshot%20(1).jpg','grace.jpg','grace.jpeg','grace.png','headshot.jpg','headshot.jpeg','headshot.png'];
-    var i = 0;
-    img.onerror = function () {
-      i++;
-      if (i < names.length) { img.src = names[i]; }
-      else { img.style.display = 'none'; img.nextElementSibling.style.display = 'block'; }
-    };
-  })();
-</script>
 </body>
 </html>
