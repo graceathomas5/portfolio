@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grace Thomas | Business and policy journalist</title>
+<meta name="description" content="Grace Thomas is a New York-based journalist covering markets, business, and public policy.">
+<meta property="og:title" content="Grace Thomas | Business and policy journalist">
+<meta property="og:description" content="Clips from NBC News, Forbes, and City & State New York.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f3f6fa;
+    --surface: #ffffff;
+    --ink: #0f1a2b;
+    --muted: #55637a;
+    --line: #d5dce7;
+    --link: #1647c9;
+    --accent: #1647c9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0c1422;
+      --surface: #131d2e;
+      --ink: #eaf0f9;
+      --muted: #98a6bd;
+      --line: #263248;
+      --link: #8fb0ff;
+      --accent: #8fb0ff;
+    }
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--link); text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--link); outline-offset: 3px; border-radius: 2px; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+  .serif { font-family: "Instrument Serif", Georgia, "Times New Roman", serif; }
+
+  header.top { padding: 26px 0; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  header.top .mark { font-weight: 600; text-decoration: none; color: var(--ink); }
+  nav a { margin-left: 22px; color: var(--muted); text-decoration: none; font-size: 15px; }
+  nav a:hover { color: var(--ink); text-decoration: underline; }
+
+  .hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: center; padding: 56px 0 72px; }
+  h1 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: clamp(56px, 9vw, 104px); line-height: .95; letter-spacing: -.02em; margin: 0 0 20px; }
+  h1 em { font-style: italic; }
+  .role { font-size: 20px; font-weight: 500; margin: 0 0 12px; }
+  .bio { max-width: 32em; color: var(--muted); margin: 0 0 28px; font-size: 18px; }
+  .btn { display: inline-block; background: var(--ink); color: var(--bg); padding: 12px 22px; border-radius: 999px; text-decoration: none; font-weight: 500; font-size: 16px; }
+  .btn:hover { opacity: .88; }
+  .loc { margin-left: 16px; color: var(--muted); font-size: 15px; }
+
+  .photo { aspect-ratio: 4 / 5; border-radius: 8px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); display: grid; place-items: center; position: relative; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photo .initials { font-family: "Instrument Serif", Georgia, serif; font-size: 96px; color: var(--muted); }
+
+  .skills { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 16px 0; display: flex; flex-wrap: wrap; gap: 8px 28px; color: var(--muted); font-size: 15px; }
+
+  section { padding: 72px 0 8px; }
+  h2 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: clamp(36px, 5vw, 52px); line-height: 1.05; margin: 0 0 32px; }
+
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 26px; text-decoration: none; color: var(--ink); transition: border-color .15s; }
+  .card:hover { border-color: var(--accent); }
+  .card .outlet { font-size: 14px; color: var(--muted); margin: 0 0 10px; }
+  .card h3 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: 29px; line-height: 1.15; margin: 0 0 12px; }
+  .card p { margin: 0; color: var(--muted); font-size: 16px; }
+  .card .go { margin-top: auto; padding-top: 18px; color: var(--link); font-size: 15px; font-weight: 500; }
+
+  .cliplist { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  .cliplist li { display: grid; grid-template-columns: 170px 1fr 130px; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+  .cliplist .o { color: var(--muted); font-size: 15px; }
+  .cliplist .d { color: var(--muted); font-size: 14px; text-align: right; }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .resume-box { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 28px; }
+  .resume-box p { margin: 0 0 18px; color: var(--muted); }
+
+  footer { margin-top: 88px; border-top: 1px solid var(--line); padding: 28px 0 48px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: var(--muted); font-size: 14px; }
+  footer ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 20px; }
+
+  @media (max-width: 760px) {
+    body { font-size: 16px; }
+    .hero { grid-template-columns: 1fr; gap: 32px; padding: 32px 0 48px; }
+    .photo { max-width: 320px; }
+    .grid, .two { grid-template-columns: 1fr; }
+    .cliplist li { grid-template-columns: 1fr; gap: 2px; }
+    .cliplist .d { text-align: left; }
+    section { padding-top: 56px; }
+    nav a { margin-left: 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="#top">Grace Thomas</a>
+    <nav aria-label="Sections">
+      <a href="#work">Featured work</a>
+      <a href="#clips">Clips</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <h1>Grace <em>Thomas</em></h1>
+        <p class="role">Business and policy journalist</p>
+        <p class="bio">I report on markets, business, and public policy in New York, and I like stories where the numbers explain the news. My work has appeared at NBC News, Forbes, and City &amp; State New York.</p>
+        <a class="btn" href="#work">View my work</a><span class="loc">New York, NY</span>
+      </div>
+      <div class="photo">
+        <!-- Put your photo in this folder as grace.jpg. Until then, initials show. -->
+        <img src="grace.jpg" alt="Portrait of Grace Thomas" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="initials" style="display:none" aria-hidden="true">GT</span>
+      </div>
+    </div>
+
+    <div class="skills" aria-label="Skills">
+      <span>Business reporting</span><span>Markets</span><span>Public policy</span><span>Data analysis</span><span>Breaking news</span>
+    </div>
+
+    <section id="work" aria-labelledby="work-h">
+      <h2 id="work-h">Featured work</h2>
+      <div class="grid">
+        <a class="card" href="https://www.forbes.com/sites/gracethomas/2025/03/14/heres-how-much-american-billionaires-have-lost-since-trumps-inauguration/">
+          <p class="outlet">Forbes, March 2025</p>
+          <h3>How much American billionaires have lost since Trump's inauguration</h3>
+          <p>Tariff uncertainty and a falling market erased $415 billion from U.S. billionaire wealth in eight weeks.</p>
+          <span class="go">Read the story</span>
+        </a>
+        <a class="card" href="https://www.nbcnews.com/business/real-estate/homeownership-losing-edge-americas-top-wealth-builder-rcna589532">
+          <p class="outlet">NBC News, July 2026</p>
+          <h3>Homeownership is losing its edge as America's most reliable wealth builder</h3>
+          <p>Inflation has outpaced home values for a full year, and stocks now drive more household wealth than real estate.</p>
+          <span class="go">Read the story</span>
+        </a>
+        <a class="card" href="https://www.cityandstateny.com/policy/2026/03/mr-mayor-i-would-choose-you-adversary-any-day-week-some-council-members-are-readying-latest-rental-voucher-fight/412191/">
+          <p class="outlet">City &amp; State New York, March 2026</p>
+          <h3>Some Council members are readying for the latest rental voucher fight</h3>
+          <p>Advocates and budget watchdogs clash over CityFHEPS, a voucher program that has tripled in cost in three years.</p>
+          <span class="go">Read the story</span>
+        </a>
+        <a class="card" href="https://www.nbcnews.com/tech/tech-news/kalshi-looks-expand-contracts-related-air-travel-delays-rcna587702">
+          <p class="outlet">NBC News, July 2026</p>
+          <h3>Kalshi looks to expand contracts related to air travel delays</h3>
+          <p>The prediction market filed to let traders bet on flight cancellations, raising questions about insider trading.</p>
+          <span class="go">Read the story</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="clips" aria-labelledby="clips-h">
+      <h2 id="clips-h">All clips</h2>
+      <ul class="cliplist">
+        <li><span class="o">City &amp; State</span><a href="https://www.cityandstateny.com/politics/2026/02/only-12-alex-bores-donations-come-ny-12/411515/">Only 12% of Alex Bores' donations come from NY-12</a><span class="d">Feb. 2026</span></li>
+        <li><span class="o">NBC News</span><a href="https://www.nbcnews.com/business/consumer/americas-obsession-whey-protein-leading-cheese-rcna588939">America's obsession with whey protein has a delicious consequence: more cheese</a><span class="d">July 2026</span></li>
+        <li><span class="o">NBC News</span><a href="https://www.nbcnews.com/business/consumer/glp-1-cost-benefit-new-research-rcna351849">New research aims to get closer to settling the debate over whether GLP-1s are worth the cost</a><span class="d">July 2026</span></li>
+        <li><span class="o">NBC News</span><a href="https://www.nbcnews.com/business/ceo-interviews/burger-king-glp1s-tom-curtis-rcna588024">How Burger King is preparing for the GLP-1 revolution</a><span class="d">July 2026</span></li>
+        <li><span class="o">NBC News</span><a href="https://www.nbcnews.com/business/consumer/cyclospora-trust-crisis-taco-bell-taylor-farms-rcna588817">How the cyclospora lettuce outbreak sparked a massive consumer trust crisis</a><span class="d">July 2026</span></li>
+        <li><span class="o">NYC News Service</span><a href="https://www.nycitynewsservice.com/2025/10/10/this-is-a-human-rights-issue-city-council-confronts-persistent-housing-discrimination/">"This is a human rights issue": City Council confronts persistent housing discrimination</a><span class="d">Oct. 2025</span></li>
+        <li><span class="o">Forbes</span><a href="https://www.forbes.com/sites/gracethomas/2025/04/03/how-the-worlds-billionaires-got-so-rich-2025/">How the world's billionaires got so rich</a><span class="d">Apr. 2025</span></li>
+        <li><span class="o">Forbes</span><a href="https://www.forbes.com/sites/gracethomas/2025/04/02/heres-who-dropped-off-forbes-2025-billionaires-list/">Here's who dropped off Forbes' 2025 billionaires list</a><span class="d">Apr. 2025</span></li>
+        <li><span class="o">TechPolicy.Press</span><a href="https://www.techpolicy.press/politicians-move-to-limit-predictive-policing-after-years-of-controversial-failures/">Politicians move to limit predictive policing after years of controversial failures</a><span class="d">Oct. 2024</span></li>
+        <li><span class="o">Newsweek (opinion)</span><a href="https://www.newsweek.com/can-evangelicalism-survive-politics-pulpit-opinion-1961395">Can evangelicalism survive with politics in the pulpit?</a><span class="d">Oct. 2024</span></li>
+      </ul>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Contact</h2>
+      <div class="resume-box" style="max-width:520px">
+        <a class="btn" href="mailto:grace.al.thomas@gmail.com">Email me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Grace Thomas, New York</span>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/grace-a-thomas/">LinkedIn</a></li>
+    </ul>
+    <span>&copy; 2026</span>
+  </footer>
+</div>
+</body>
+</html>
