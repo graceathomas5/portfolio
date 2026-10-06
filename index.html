@@ -9,39 +9,28 @@
 <meta property="og:description" content="Clips from NBC News, Forbes, and City & State New York.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f3f6fa;
+    --bg: #ffffff;
     --surface: #ffffff;
-    --ink: #0f1a2b;
-    --muted: #55637a;
-    --line: #d5dce7;
-    --link: #1647c9;
-    --accent: #1647c9;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0c1422;
-      --surface: #131d2e;
-      --ink: #eaf0f9;
-      --muted: #98a6bd;
-      --line: #263248;
-      --link: #8fb0ff;
-      --accent: #8fb0ff;
-    }
+    --ink: #111111;
+    --muted: #5c5c5c;
+    --line: #e4e4e4;
+    --link: #111111;
+    --accent: #111111;
   }
   *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
     margin: 0; background: var(--bg); color: var(--ink);
-    font-family: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased;
+    font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 18px; line-height: 1.6; -webkit-font-smoothing: antialiased;
   }
   a { color: var(--link); text-underline-offset: 3px; }
   a:focus-visible, button:focus-visible { outline: 3px solid var(--link); outline-offset: 3px; border-radius: 2px; }
   .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
-  .serif { font-family: "Instrument Serif", Georgia, "Times New Roman", serif; }
+  .serif { font-family: "Playfair Display", Georgia, "Times New Roman", serif; }
 
   header.top { padding: 26px 0; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
   header.top .mark { font-weight: 600; text-decoration: none; color: var(--ink); }
@@ -49,7 +38,7 @@
   nav a:hover { color: var(--ink); text-decoration: underline; }
 
   .hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: center; padding: 56px 0 72px; }
-  h1 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: clamp(56px, 9vw, 104px); line-height: .95; letter-spacing: -.02em; margin: 0 0 20px; }
+  h1 { font-family: "Playfair Display", Georgia, serif; font-weight: 400; font-size: clamp(48px, 8vw, 88px); line-height: 1; letter-spacing: -.02em; margin: 0 0 20px; }
   h1 em { font-style: italic; }
   .role { font-size: 20px; font-weight: 500; margin: 0 0 12px; }
   .bio { max-width: 32em; color: var(--muted); margin: 0 0 28px; font-size: 18px; }
@@ -59,18 +48,18 @@
 
   .photo { aspect-ratio: 4 / 5; border-radius: 8px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); display: grid; place-items: center; position: relative; }
   .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .photo .initials { font-family: "Instrument Serif", Georgia, serif; font-size: 96px; color: var(--muted); }
+  .photo .initials { font-family: "Playfair Display", Georgia, serif; font-size: 96px; color: var(--muted); }
 
-  .skills { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 16px 0; display: flex; flex-wrap: wrap; gap: 8px 28px; color: var(--muted); font-size: 15px; }
+  .skills { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 16px 0; display: flex; flex-wrap: wrap; justify-content: center; text-align: center; gap: 8px 28px; color: var(--muted); font-size: 15px; }
 
   section { padding: 72px 0 8px; }
-  h2 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: clamp(36px, 5vw, 52px); line-height: 1.05; margin: 0 0 32px; }
+  h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 400; font-size: clamp(36px, 5vw, 52px); line-height: 1.05; margin: 0 0 32px; }
 
   .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 26px; text-decoration: none; color: var(--ink); transition: border-color .15s; }
   .card:hover { border-color: var(--accent); }
   .card .outlet { font-size: 14px; color: var(--muted); margin: 0 0 10px; }
-  .card h3 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: 29px; line-height: 1.15; margin: 0 0 12px; }
+  .card h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 400; font-size: 25px; line-height: 1.2; margin: 0 0 12px; }
   .card p { margin: 0; color: var(--muted); font-size: 16px; }
   .card .go { margin-top: auto; padding-top: 18px; color: var(--link); font-size: 15px; font-weight: 500; }
 
@@ -118,14 +107,14 @@
         <a class="btn" href="#work">View my work</a><span class="loc">New York, NY</span>
       </div>
       <div class="photo">
-        <!-- Put your photo in this folder as grace.jpg. Until then, initials show. -->
-        <img src="grace.jpg" alt="Portrait of Grace Thomas" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <!-- Upload your photo to the same place as index.html, named headshot (1).jpg or grace.jpg -->
+        <img id="headshot" src="headshot%20(1).jpg" alt="Portrait of Grace Thomas">
         <span class="initials" style="display:none" aria-hidden="true">GT</span>
       </div>
     </div>
 
     <div class="skills" aria-label="Skills">
-      <span>Business reporting</span><span>Markets</span><span>Public policy</span><span>Data analysis</span><span>Breaking news</span>
+      <span>Business reporting</span><span>Data analysis</span><span>Data visualization</span><span>Enterprise reporting</span><span>Breaking news</span>
     </div>
 
     <section id="work" aria-labelledby="work-h">
@@ -159,26 +148,21 @@
     </section>
 
     <section id="clips" aria-labelledby="clips-h">
-      <h2 id="clips-h">All clips</h2>
+      <h2 id="clips-h">Selected clips</h2>
       <ul class="cliplist">
-        <li><span class="o">City &amp; State</span><a href="https://www.cityandstateny.com/politics/2026/02/only-12-alex-bores-donations-come-ny-12/411515/">Only 12% of Alex Bores' donations come from NY-12</a><span class="d">Feb. 2026</span></li>
+        <li><span class="o">NBC News</span><a href="https://www.nbcnews.com/business/consumer/economy-lipstick-movies-treats-pets-rcna590668">Americans fight economic gloom with makeup and movie tickets</a><span class="d">Aug. 2026</span></li>
         <li><span class="o">NBC News</span><a href="https://www.nbcnews.com/business/consumer/americas-obsession-whey-protein-leading-cheese-rcna588939">America's obsession with whey protein has a delicious consequence: more cheese</a><span class="d">July 2026</span></li>
         <li><span class="o">NBC News</span><a href="https://www.nbcnews.com/business/consumer/glp-1-cost-benefit-new-research-rcna351849">New research aims to get closer to settling the debate over whether GLP-1s are worth the cost</a><span class="d">July 2026</span></li>
-        <li><span class="o">NBC News</span><a href="https://www.nbcnews.com/business/ceo-interviews/burger-king-glp1s-tom-curtis-rcna588024">How Burger King is preparing for the GLP-1 revolution</a><span class="d">July 2026</span></li>
         <li><span class="o">NBC News</span><a href="https://www.nbcnews.com/business/consumer/cyclospora-trust-crisis-taco-bell-taylor-farms-rcna588817">How the cyclospora lettuce outbreak sparked a massive consumer trust crisis</a><span class="d">July 2026</span></li>
-        <li><span class="o">NYC News Service</span><a href="https://www.nycitynewsservice.com/2025/10/10/this-is-a-human-rights-issue-city-council-confronts-persistent-housing-discrimination/">"This is a human rights issue": City Council confronts persistent housing discrimination</a><span class="d">Oct. 2025</span></li>
+        <li><span class="o">City &amp; State</span><a href="https://www.cityandstateny.com/policy/2026/04/nyc-councils-preliminary-budget-response-doesnt-include-cityfheps-expansion-its-priorities/412573/">NYC Council's preliminary budget response doesn't include CityFHEPS expansion in its priorities</a><span class="d">Apr. 2026</span></li>
+        <li><span class="o">City &amp; State</span><a href="https://www.cityandstateny.com/politics/2026/02/only-12-alex-bores-donations-come-ny-12/411515/">Only 12% of Alex Bores' donations come from NY-12</a><span class="d">Feb. 2026</span></li>
         <li><span class="o">Forbes</span><a href="https://www.forbes.com/sites/gracethomas/2025/04/03/how-the-worlds-billionaires-got-so-rich-2025/">How the world's billionaires got so rich</a><span class="d">Apr. 2025</span></li>
-        <li><span class="o">Forbes</span><a href="https://www.forbes.com/sites/gracethomas/2025/04/02/heres-who-dropped-off-forbes-2025-billionaires-list/">Here's who dropped off Forbes' 2025 billionaires list</a><span class="d">Apr. 2025</span></li>
-        <li><span class="o">TechPolicy.Press</span><a href="https://www.techpolicy.press/politicians-move-to-limit-predictive-policing-after-years-of-controversial-failures/">Politicians move to limit predictive policing after years of controversial failures</a><span class="d">Oct. 2024</span></li>
-        <li><span class="o">Newsweek (opinion)</span><a href="https://www.newsweek.com/can-evangelicalism-survive-politics-pulpit-opinion-1961395">Can evangelicalism survive with politics in the pulpit?</a><span class="d">Oct. 2024</span></li>
       </ul>
     </section>
 
     <section id="contact" aria-labelledby="contact-h">
       <h2 id="contact-h">Contact</h2>
-      <div class="resume-box" style="max-width:520px">
-        <a class="btn" href="mailto:grace.al.thomas@gmail.com">Email me</a>
-      </div>
+      <a class="btn" href="mailto:grace.al.thomas@gmail.com">Email me</a>
     </section>
   </main>
 
@@ -190,5 +174,17 @@
     <span>&copy; 2026</span>
   </footer>
 </div>
+<script>
+  (function () {
+    var img = document.getElementById('headshot');
+    var names = ['headshot%20(1).jpg','grace.jpg','grace.jpeg','grace.png','headshot.jpg','headshot.jpeg','headshot.png'];
+    var i = 0;
+    img.onerror = function () {
+      i++;
+      if (i < names.length) { img.src = names[i]; }
+      else { img.style.display = 'none'; img.nextElementSibling.style.display = 'block'; }
+    };
+  })();
+</script>
 </body>
 </html>
